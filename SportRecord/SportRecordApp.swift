@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SportRecordApp: App {
+    @StateObject var userSettings = UserSettings()
+    @StateObject var modal = Modal()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userSettings)
+                .environmentObject(modal)
         }
     }
 }

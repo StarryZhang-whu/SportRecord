@@ -8,19 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var modal : Modal
+    @EnvironmentObject var userSettings : UserSettings
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            RecordView().tabItem(){
+                Image(systemName: "figure.run")
+                Text("运动")
+            }
+            StatsView().tabItem(){
+                Image(systemName: "clock.arrow.circlepath")
+                Text("统计")
+            }
+            AccountView().tabItem(){
+                Image(systemName: "person.fill")
+                Text("用户")
+            }
         }
-        .padding()
+        .fullScreenCover(isPresented: $userSettings.isNotLoggedIn){
+            if(modal.signIn){
+                LoginView()
+            } else {
+                RegisterView()
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserSettings())
+            .environmentObject(Modal())
     }
 }
