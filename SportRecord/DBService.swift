@@ -121,5 +121,13 @@ class DBService {
             return nil
         }
     }
+    
+    func deleteRecords(){
+        do{
+            try db!.run(records.delete())
+        } catch {
+            print("error when delete records")
+        }
+    }
 
 }

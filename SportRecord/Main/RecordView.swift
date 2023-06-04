@@ -10,6 +10,10 @@ import SwiftUI
 struct RecordView: View {
     @State var showAlert = false
     @State var alertMessage = ""
+        
+    @State private var countdownTime: Int = 0
+    @State private var remainingTime: Int = 0
+    @State private var isCountingDown: Bool = false
     
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
@@ -32,7 +36,7 @@ struct RecordView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack (){
                 Text("运动记录图：").frame(maxWidth: .infinity, alignment: .leading).font(.subheadline).foregroundColor(Color("Text")).padding(.leading,50).padding(.vertical)
-                Image(uiImage: inputImage ?? UIImage()).resizable().aspectRatio(contentMode: .fit).frame(maxHeight: 200)
+                Image(uiImage: inputImage ?? UIImage()).resizable().aspectRatio(contentMode: .fit).frame(maxHeight: 120)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 20).fill(.ultraThinMaterial))
                 Button{
@@ -43,6 +47,16 @@ struct RecordView: View {
                         .frame(maxWidth: .infinity, maxHeight: 50)
                         .background(RoundedRectangle(cornerRadius: 20).stroke(.linearGradient(colors: [.white.opacity(0.8), .black.opacity(0.2)], startPoint: .top, endPoint: .bottom)))
                 }.padding(.horizontal, 100)
+                Text("选择倒计时：").frame(maxWidth: .infinity, alignment: .leading).font(.subheadline).foregroundColor(Color("Text")).padding(.leading,50).padding(.vertical)
+                Picker(selection: $countdownTime, label: Text("选择倒计时时间")) {
+                                ForEach(1..<61) { time in
+                                    Text("\(time) 分钟")
+                                }
+                            }
+                            .labelsHidden() // 隐藏标签
+                            .pickerStyle(WheelPickerStyle()) // 设置选择器样式
+                            .frame(width: 200, height: 90) // 设置选择器大小
+                            .clipped() // 修剪超出的内容
                 Text("当前运动时间：").frame(maxWidth: .infinity, alignment: .leading).font(.subheadline).foregroundColor(Color("Text")).padding(.leading,50).padding(.vertical)
                 Text(formatter.string(from: timeElapsed) ?? "00:00:00")
                                 .font(.largeTitle)

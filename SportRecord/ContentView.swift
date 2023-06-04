@@ -1,7 +1,6 @@
 //
 //  ContentView.swift
 //  SportRecord
-//
 //  Created by 张凌浩 on 2023/5/22.
 //
 

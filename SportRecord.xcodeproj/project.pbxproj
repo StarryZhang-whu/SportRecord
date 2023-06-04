@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2F8F7E2A21CBA100FAFC38 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F8F7D2A21CBA100FAFC38 /* EditView.swift */; };
+		1E2F8F872A21D11600FAFC38 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F8F862A21D11600FAFC38 /* PrivacyView.swift */; };
 		1E62C6EA2A1B5F56003C9C5B /* SportRecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62C6E92A1B5F56003C9C5B /* SportRecordApp.swift */; };
 		1E62C6EC2A1B5F56003C9C5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62C6EB2A1B5F56003C9C5B /* ContentView.swift */; };
 		1E62C6EE2A1B5F58003C9C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E62C6ED2A1B5F58003C9C5B /* Assets.xcassets */; };
@@ -93,6 +95,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E2F8F7D2A21CBA100FAFC38 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		1E2F8F862A21D11600FAFC38 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 		1E62C6E62A1B5F56003C9C5B /* SportRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E62C6E92A1B5F56003C9C5B /* SportRecordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordApp.swift; sourceTree = "<group>"; };
 		1E62C6EB2A1B5F56003C9C5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				1E62C7292A1DF9FE003C9C5B /* StatsView.swift */,
 				1E62C72B2A1E7691003C9C5B /* RecordDetailView.swift */,
 				1E62C72D2A1E7A43003C9C5B /* AccountView.swift */,
+				1E2F8F7D2A21CBA100FAFC38 /* EditView.swift */,
+				1E2F8F862A21D11600FAFC38 /* PrivacyView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				1E62C6EC2A1B5F56003C9C5B /* ContentView.swift in Sources */,
 				1E62C72C2A1E7691003C9C5B /* RecordDetailView.swift in Sources */,
 				1E62C7282A1D2D2A003C9C5B /* Modal.swift in Sources */,
+				1E2F8F7E2A21CBA100FAFC38 /* EditView.swift in Sources */,
 				1E62C6FB2A1B63EB003C9C5B /* UserSettings.swift in Sources */,
 				1E62C7022A1B6772003C9C5B /* Modifier.swift in Sources */,
 				1E62C6F92A1B613B003C9C5B /* RecordView.swift in Sources */,
@@ -351,6 +358,7 @@
 				1E62C6EA2A1B5F56003C9C5B /* SportRecordApp.swift in Sources */,
 				1E62C72E2A1E7A43003C9C5B /* AccountView.swift in Sources */,
 				1E62C70A2A1C63B2003C9C5B /* DBService.swift in Sources */,
+				1E2F8F872A21D11600FAFC38 /* PrivacyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

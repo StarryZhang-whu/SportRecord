@@ -18,13 +18,14 @@ struct AccountView: View {
                     Button{ showEdit.toggle() }label: {
                         person.padding(.vertical)
                     }.sheet(isPresented: $showEdit){
+                        EditView()
                     }
                     
                     Section{
                         NavigationLink {} label: {
                             Label("设置", systemImage: "gear")
                         }
-                        NavigationLink {} label: {
+                        NavigationLink { PrivacyView() } label: {
                             Label("隐私", systemImage: "lock.doc")
                         }
                         NavigationLink {} label: {
